@@ -1,0 +1,13 @@
+Session08-BT04-Phần 1,2
+
+- Xác định Input/Output:
+	+ Input: nhập tên, nhập mật khẩu, nhập xác nhận mật khẩu
+	+ Output: => Thành công: mật khẩu === xác nhận mật khẩu
+		  => Thất bại: thông báo mật khẩu không khớp
+
+- Lập bảng so sánh:
+Tiêu chí	if-else	Class-Level Custom Annotation
+Khả năng tái sử dụng	Kém – Logic bị “cứng” trong Controller, không tái sử dụng được cho form khác	Rất tốt – Chỉ cần gắn Annotation là dùng được ở bất kỳ DTO nào
+Clean Code	Khó bảo trì – Khi rule thay đổi (VD: thêm logic mới), phải sửa nhiều nơi	Dễ bảo trì – Chỉ sửa 1 chỗ trong Validator
+Khả năng mở rộng	Kém – Nếu có thêm rule (VD: password không chứa username) → Controller càng phình to	Tốt – Có thể thêm nhiều annotation khác mà không ảnh hưởng Controller
+Dễ test	Khó – Phải test thông qua Controller	Dễ – Có thể unit test riêng Validator
